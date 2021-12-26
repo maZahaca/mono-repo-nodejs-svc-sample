@@ -104,6 +104,7 @@ class Server {
             return;
           }
           this.server.start();
+          console.log(`server stated at ${host}`);
           resolve();
         },
       );
