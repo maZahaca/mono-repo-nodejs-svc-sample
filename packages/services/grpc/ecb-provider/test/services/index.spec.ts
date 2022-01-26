@@ -69,24 +69,6 @@ describe('ecbProvider', () => {
   afterAll(async () => {
     await server.stop();
   });
-  describe('GetSupportedCurrencies', () => {
-    it('should return supported currencies', async () => {
-      const response = await client.GetSupportedCurrencies(new currencyProvider.GetSupportedCurrenciesRequest());
-      expect(response.toObject()).toEqual({
-        baseCurrency: 'EUR',
-        currencies: [
-          'USD', 'JPY', 'BGN', 'CZK',
-          'DKK', 'GBP', 'HUF', 'PLN',
-          'RON', 'SEK', 'CHF', 'ISK',
-          'NOK', 'HRK', 'RUB', 'TRY',
-          'AUD', 'BRL', 'CAD', 'CNY',
-          'HKD', 'IDR', 'ILS', 'INR',
-          'KRW', 'MXN', 'MYR', 'NZD',
-          'PHP', 'SGD', 'THB', 'ZAR'
-        ],
-      });
-    });
-  });
   describe('GetRates', () => {
     it('should return currency rates', async () => {
       const response = await client.GetRates(new currencyProvider.GetRatesRequest());

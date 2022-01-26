@@ -17,11 +17,5 @@ message ConvertResponse {
   string buyCurrency = 2;
 
   double conversionRate = 3;
-
-//  message Breakdown {
-//    repeated string lines = 1;
-//  }
-//
-//  Breakdown breakdown = 4;
 }
 

@@ -6,13 +6,6 @@ const protoOptions: LoadProtoOptions = {
   path: `${__dirname}/../../../../../proto/currency-converter.proto`,
   package: 'currencyConverter',
   service: 'CurrencyConverter',
-  options: {
-    keepCase: true,
-    longs: String,
-    enums: String,
-    defaults: true,
-    oneofs: true,
-  },
 };
 
 const server = new Server(`0.0.0.0:${PORT}`, protoOptions);
