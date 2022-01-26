@@ -5,7 +5,7 @@ const {
 } = currencyProvider;
 
 // PROVIDER_SERVICES=localhost:50052,localhost:50053
-const { PROVIDER_SERVICES } = process.env;
+const { PROVIDER_SERVICES = '' } = process.env;
 
 const providerClients = PROVIDER_SERVICES
   .split(',')
